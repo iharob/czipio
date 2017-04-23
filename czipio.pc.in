@@ -1,0 +1,11 @@
+prefix=@prefix@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/
+includedir=${prefix}/include
+
+Name: htizip
+Description: Simple Zip Library
+Requires: libssl libcrypto zlib
+Version: @PACKAGE_VERSION@
+Libs: -L${libdir} -lczipio
+Cflags: -I${includedir}/czipio
