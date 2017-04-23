@@ -179,17 +179,16 @@ typedef struct __attribute__((packed)) end_central_directory
     int16_t comment_length;
 } end_central_directory;
 
-typedef enum FileMode
-{
-    ReadOnly,
+typedef enum czipio_mode
+{    ReadOnly,
     WriteOnly
-} FileMode;
+} czipio_mode;
 
 typedef struct czipio_file
 {
     czipio_entry *files;
     char *root;
-    FileMode mode;
+    czipio_mode mode;
     char *target;
     size_t strip_from_path;
 } czipio_file;
